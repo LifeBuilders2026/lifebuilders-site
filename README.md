@@ -13,7 +13,7 @@ Source for lifebuilders.net, a ministry of Preston Woody Foundation Corporation 
 3. Commit and push. The site updates in about a minute.
 
 ## Forms
-Three Google Forms are embedded on the site. All responses land in the "Life Builders Form Responses" Google Sheet (tab 1 mentorship, tab 2 story, tab 3 contact). `tools/create-forms.gs` is the script that created them.
+Three Google Forms are embedded on the site. All responses land in the "Life Builders Form Responses" Google Sheet (tabs: Mentorship Applications, Story Submissions, Contact Messages). `tools/create-forms.gs` is the script that created them. `tools/form-alerts.gs` emails each new response to the people listed in it.
 - Mentorship application: /mentorship/
 - Share your story: /story/
 - Contact: /contact/
