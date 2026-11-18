@@ -85,7 +85,7 @@ PATHWAY = """
     <p class="lede center narrow">Every gift funds one connected mission, not one isolated program. A message reaches a man, truth roots him, mentorship equips him, and his family is strengthened.</p>
     <ol class="pathway">
       <li><span class="num">1</span><p class="eyebrow">Reach</p><p class="big">100,000</p><p>people reached through The Standard podcast</p></li>
-      <li><span class="num">2</span><p class="eyebrow">Root</p><p class="big">Bible plan</p><p>truth becomes a daily rhythm</p></li>
+      <li><span class="num">2</span><p class="eyebrow">Root</p><p class="big">Bible plan</p><p>a custom plan to help men find truth</p></li>
       <li><span class="num">3</span><p class="eyebrow">Open access</p><p class="big">30 to 40</p><p>men sponsored through mentorship and transformational experiences</p></li>
       <li><span class="num">4</span><p class="eyebrow">Equip</p><p class="big">3 mentors</p><p>trained to guide lasting change</p></li>
       <li><span class="num">5</span><p class="eyebrow">Multiply</p><p class="big">Generations</p><p>stronger men strengthen marriages, children, churches and communities</p></li>
