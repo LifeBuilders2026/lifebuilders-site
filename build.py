@@ -289,10 +289,9 @@ MENTORSHIP = """
   <div class="wrap narrow">
     <p class="eyebrow center">Apply</p>
     <h2 class="center">Start your application</h2>
-    <div class="form-slot" data-form="mentorship">
-      <p>The application form opens here soon.</p>
-      <p class="fineprint">Questions in the meantime? <a href="{root}contact/">Send us a message</a>.</p>
-    </div>
+    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdecv6O4qvhO327ga7zbDR93pkgMOqBBIhntdF6pSUaMI-jIQ/viewform?embedded=true" height="1500" title="Mentorship application" loading="lazy">Loading</iframe></div>
+    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdecv6O4qvhO327ga7zbDR93pkgMOqBBIhntdF6pSUaMI-jIQ/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    <p class="fineprint center">Questions first? <a href="{root}contact/">Send us a message</a>.</p>
   </div>
 </section>
 """
@@ -321,9 +320,8 @@ STORY = """
   <div class="wrap narrow">
     <p class="eyebrow center">Your story</p>
     <h2 class="center">Share it here</h2>
-    <div class="form-slot" data-form="story">
-      <p>The story form opens here soon.</p>
-    </div>
+    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzvm9KSJhWinfOeMP8FQgX_MxfvhFWLHNZ4s3_8H75B9mYZw/viewform?embedded=true" height="1900" title="Share your story" loading="lazy">Loading</iframe></div>
+    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzvm9KSJhWinfOeMP8FQgX_MxfvhFWLHNZ4s3_8H75B9mYZw/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
     <p class="fineprint center">Your story stays private. We will never share it publicly without your separate permission.</p>
   </div>
 </section>
@@ -403,9 +401,8 @@ CONTACT = """
 
 <section class="section">
   <div class="wrap narrow">
-    <div class="form-slot" data-form="contact">
-      <p>The contact form opens here soon.</p>
-    </div>
+    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwSduOYAwvJzvgOXlVb3w8G5N3lhbIoVCTcSCq1GT1Ym7HPg/viewform?embedded=true" height="1150" title="Contact Life Builders" loading="lazy">Loading</iframe></div>
+    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwSduOYAwvJzvgOXlVb3w8G5N3lhbIoVCTcSCq1GT1Ym7HPg/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
   </div>
 </section>
 """

@@ -141,7 +141,8 @@ cite { display: block; font-style: normal; font-weight: 800; letter-spacing: .18
 
 /* Form slot */
 .form-slot { margin-top: 30px; background: var(--cream); border: 2px dashed var(--gold); border-radius: var(--radius); padding: 50px 30px; text-align: center; }
-.form-slot iframe { width: 100%; min-height: 1100px; border: 0; }
+.form-embed { margin-top: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.form-embed iframe { display: block; width: 100%; border: 0; }
 
 /* Footer */
 .site-footer { background: var(--navy-deep); color: #c3c6d1; padding: 70px 0 30px; font-size: .95rem; }
