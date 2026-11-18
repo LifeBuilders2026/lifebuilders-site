@@ -12,8 +12,11 @@ Source for lifebuilders.net, a ministry of Preston Woody Foundation Corporation 
 2. Run `python3 build.py`.
 3. Commit and push. The site updates in about a minute.
 
-
-The mentorship application and story form are Google Forms embedded in the `form-slot` boxes on `/mentorship/` and `/story/`. Responses land in Google Sheets.
+## Forms
+Three Google Forms are embedded on the site. All responses land in the "Life Builders Form Responses" Google Sheet (tab 1 mentorship, tab 2 story, tab 3 contact). `tools/create-forms.gs` is the script that created them.
+- Mentorship application: /mentorship/
+- Share your story: /story/
+- Contact: /contact/
 
 ## Giving
 The Give buttons point to the GiveButter campaign (`GIVE_URL` at the top of `build.py`).
