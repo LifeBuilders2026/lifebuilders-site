@@ -6,7 +6,7 @@ SITE = pathlib.Path(__file__).parent / "site"
 GIVE_URL = "https://givebutter.com/untitled-campaign-egsgrx"  # update when the campaign slug is renamed
 
 NAV = [("", "Home"), ("about/", "Our Story"), ("mentorship/", "Mentorship"),
-       ("story/", "Share Your Story"), ("impact/", "Vision")]
+       ("story/", "Share Your Story")]
 
 
 def page(path, title, description, body, active):
@@ -54,7 +54,6 @@ def page(path, title, description, body, active):
         <li><a href="{root}about/">Our Story</a></li>
         <li><a href="{root}mentorship/">Mentorship</a></li>
         <li><a href="{root}story/">Share Your Story</a></li>
-        <li><a href="{root}impact/">Vision</a></li>
         <li><a href="{root}give/">Give</a></li>
         <li><a href="{root}contact/">Contact</a></li>
       </ul>
@@ -222,17 +221,12 @@ ABOUT = """
 <section class="section">
   <div class="wrap">
     <p class="eyebrow center">Where we're going</p>
-    <h2 class="center">One-year and ten-year vision</h2>
-    <div class="table-wrap">
-      <table class="vision">
-        <thead><tr><th></th><th>The Standard Podcast</th><th>Bible Experience</th><th>Mentorship</th></tr></thead>
-        <tbody>
-          <tr><th>Year 1</th><td>Produce 16 podcast messages</td><td>Build a Bible reading plan and pursue a YouVersion partnership</td><td>Open access to mentorship</td></tr>
-          <tr><th>10 years</th><td>Reach 3 million through long-form listens</td><td>Help 100,000 men experience the whole Bible</td><td>Provide 1,000 mentorship sponsorships</td></tr>
-        </tbody>
-      </table>
+    <h2 class="center">The next ten years</h2>
+    <div class="cards three">
+      <article class="card stat"><p class="eyebrow">The Standard Podcast</p><p class="big">3 million</p><p>people reached with the message</p></article>
+      <article class="card stat"><p class="eyebrow">Bible Experience</p><p class="big">100,000</p><p>men who experience the whole Bible</p></article>
+      <article class="card stat"><p class="eyebrow">Mentorship</p><p class="big">1,000</p><p>men mentored, free of cost</p></article>
     </div>
-    <p class="center"><a class="text-link" href="{root}impact/">See the full vision &rarr;</a></p>
   </div>
 </section>
 
@@ -333,37 +327,15 @@ STORY = """
     <p class="fineprint center">Your story stays private. We will never share it publicly without your separate permission.</p>
   </div>
 </section>
-"""
-
-IMPACT = """
-<section class="page-hero">
-  <div class="wrap narrow">
-    <p class="eyebrow light">Our vision</p>
-    <h1>One man at a time. Generations at a time.</h1>
-    <p class="hero-lede">Here's the path we walk with every man, and where we believe it leads over the next ten years.</p>
-  </div>
-</section>
-""" + PATHWAY + """
-<section class="section alt">
-  <div class="wrap">
-    <p class="eyebrow center">Ten-year vision</p>
-    <h2 class="center">Where the pathway leads</h2>
-    <div class="cards three">
-      <article class="card stat"><p class="eyebrow">The Standard Podcast</p><p class="big">3 million</p><p>reached through long-form listens</p></article>
-      <article class="card stat"><p class="eyebrow">Bible Experience</p><p class="big">100,000</p><p>men who experience the whole Bible</p></article>
-      <article class="card stat"><p class="eyebrow">Mentorship</p><p class="big">1,000</p><p>mentorship sponsorships provided</p></article>
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="wrap narrow">
     <p class="eyebrow">Stories</p>
     <h2>Stories from the work</h2>
-    <p>As men share how God is changing their lives, we'll tell those stories here, always with their permission. Has The Standard helped you? <a href="{root}story/">Share your story</a>.</p>
+    <p>As men share how God is changing their lives, we'll tell those stories here, always with their permission.</p>
   </div>
 </section>
-""" + GIVE_BAND
+"""
 
 GIVE = f"""
 <section class="page-hero">
@@ -443,7 +415,6 @@ page("", "Life Builders | Build the man. Strengthen the family. Change the legac
 page("about/", "Our Story | Life Builders", "The story behind Life Builders and its founder, Preston Woody.", ABOUT, "about/")
 page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
-page("impact/", "Our Vision | Life Builders", "The path Life Builders walks with every man, and where it leads over ten years.", IMPACT, "impact/")
 page("contact/", "Contact | Life Builders", "Send Life Builders a message.", CONTACT, "contact/")
 page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/")
 # CNAME added once DNS points to GitHub Pages: (SITE / "CNAME").write_text("lifebuilders.net\n")
