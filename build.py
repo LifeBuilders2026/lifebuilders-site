@@ -414,6 +414,6 @@ page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virt
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
 page("contact/", "Contact | Life Builders", "Send Life Builders a message.", CONTACT, "contact/")
 page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/")
-# CNAME added once DNS points to GitHub Pages: (SITE / "CNAME").write_text("lifebuilders.net\n")
+(SITE / "CNAME").write_text("lifebuilders.net\n")
 (SITE / ".nojekyll").write_text("")
 print("built")
