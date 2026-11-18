@@ -7,7 +7,7 @@ GIVE_URL = "https://givebutter.com/untitled-campaign-egsgrx"  # update when the 
 CONTACT_EMAIL = "preston@saintscrown.com"
 
 NAV = [("", "Home"), ("about/", "Our Story"), ("mentorship/", "Mentorship"),
-       ("story/", "Share Your Story"), ("impact/", "Impact")]
+       ("story/", "Share Your Story"), ("impact/", "Vision")]
 
 
 def page(path, title, description, body, active):
@@ -55,7 +55,7 @@ def page(path, title, description, body, active):
         <li><a href="{root}about/">Our Story</a></li>
         <li><a href="{root}mentorship/">Mentorship</a></li>
         <li><a href="{root}story/">Share Your Story</a></li>
-        <li><a href="{root}impact/">Impact</a></li>
+        <li><a href="{root}impact/">Vision</a></li>
         <li><a href="{root}give/">Give</a></li>
       </ul>
     </div>
@@ -82,15 +82,14 @@ PATHWAY = """
   <div class="wrap">
     <p class="eyebrow center">One connected pathway</p>
     <h2 class="center">From reach to generational impact</h2>
-    <p class="lede center narrow">Every gift funds one connected mission, not one isolated program. A message reaches a man, truth roots him, mentorship equips him, and his family is strengthened.</p>
+    <p class="lede center narrow">A message reaches a man. Truth roots him. A mentor equips him. His family is strengthened.</p>
     <ol class="pathway">
-      <li><span class="num">1</span><p class="eyebrow">Reach</p><p class="big">100,000</p><p>people reached through The Standard podcast</p></li>
+      <li><span class="num">1</span><p class="eyebrow">Reach</p><p class="big">The Standard</p><p>a podcast that gives men language for the drift</p></li>
       <li><span class="num">2</span><p class="eyebrow">Root</p><p class="big">Bible plan</p><p>a custom plan to help men find truth</p></li>
-      <li><span class="num">3</span><p class="eyebrow">Open access</p><p class="big">30 to 40</p><p>men sponsored through mentorship and transformational experiences</p></li>
-      <li><span class="num">4</span><p class="eyebrow">Equip</p><p class="big">3 mentors</p><p>trained to guide lasting change</p></li>
+      <li><span class="num">3</span><p class="eyebrow">Open access</p><p class="big">Free mentorship</p><p>sponsored, so cost never keeps a man stuck</p></li>
+      <li><span class="num">4</span><p class="eyebrow">Equip</p><p class="big">Trained mentors</p><p>men who walk beside you and call out the gold</p></li>
       <li><span class="num">5</span><p class="eyebrow">Multiply</p><p class="big">Generations</p><p>stronger men strengthen marriages, children, churches and communities</p></li>
     </ol>
-    <p class="fineprint center">First-year targets. We will report verified results as the pathway launches.</p>
   </div>
 </section>
 """
@@ -99,11 +98,11 @@ GIVE_BAND = """
 <section class="band navy">
   <div class="wrap band-row">
     <div>
-      <p class="eyebrow light">Unrestricted donor support</p>
-      <h2>Help us build the first men, families and legacies.</h2>
-      <p>Your gift removes the financial barrier for men who are ready to change but can't afford the help.</p>
+      <p class="eyebrow light">Join the work</p>
+      <h2>Help build the next man.</h2>
+      <p>Mentorship is free for every man we serve because partners cover the cost.</p>
     </div>
-    <div class="band-actions"><a class="btn btn-gold" href="{root}give/">Give now</a></div>
+    <div class="band-actions"><a class="btn btn-gold" href="{root}give/">Give</a></div>
   </div>
 </section>
 """
@@ -112,9 +111,9 @@ HOME = """
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow light">Life Builders &middot; A 501(c)(3) charitable organization</p>
+      <p class="eyebrow light">For men ready to stop drifting</p>
       <h1>Build the man. Strengthen the family. Change the legacy.</h1>
-      <p class="hero-lede">Men are drifting without mentors, purpose or a foundation in Scripture. Life Builders helps them root their lives in truth, walks beside them with a mentor, and removes the cost barrier so any man can start.</p>
+      <p class="hero-lede">You weren't made to drift. Life Builders helps men root their lives in Scripture, walk with a mentor, and lead their families well. Mentorship is free for the men we serve.</p>
       <div class="actions">
         <a class="btn btn-gold" href="{root}mentorship/">Apply for mentorship</a>
         <a class="btn btn-outline" href="{root}story/">Share your story</a>
@@ -127,7 +126,7 @@ HOME = """
 <section class="section">
   <div class="wrap two-col">
     <div>
-      <p class="eyebrow">The problem</p>
+      <p class="eyebrow">Why we exist</p>
       <h2>Drifting men create broken families.</h2>
     </div>
     <div>
@@ -155,7 +154,7 @@ HOME = """
       <article class="card">
         <p class="eyebrow">Mentorship</p>
         <h3>A mentor who walks beside him</h3>
-        <p>Sponsored mentorship and transformational experiences for men who are ready to grow, free to the participant after an application.</p>
+        <p>A trained mentor walks with you for 90 days. It's free once your application is approved.</p>
         <a class="text-link" href="{root}mentorship/">How mentorship works &rarr;</a>
       </article>
     </div>
@@ -174,7 +173,7 @@ HOME = """
       <li><p class="eyebrow">4 &middot; Accesses</p><h3>A path forward</h3><p>A scholarship removes the financial barrier. A mentor walks beside him.</p></li>
       <li><p class="eyebrow">5 &middot; Transforms</p><h3>Becomes a leader</h3><p>Faith and discipline deepen. His family sees the change.</p></li>
     </ol>
-    <p class="fineprint center">Daniel is an illustration of the path every man can take. Donor partnership makes every step possible.</p>
+    <p class="fineprint center">Daniel is an illustration. Your story can follow the same path.</p>
   </div>
 </section>
 
@@ -233,7 +232,7 @@ ABOUT = """
         </tbody>
       </table>
     </div>
-    <p class="fineprint center">Targets, not results. See the full numbers on the <a href="{root}impact/">Impact</a> page.</p>
+    <p class="center"><a class="text-link" href="{root}impact/">See the full vision &rarr;</a></p>
   </div>
 </section>
 
@@ -261,7 +260,7 @@ MENTORSHIP = """
     <div class="cards three">
       <article class="card"><p class="eyebrow">90 days</p><h3>Focused and finite</h3><p>A clear season with a written plan, so the growth lasts after the 90 days end.</p></article>
       <article class="card"><p class="eyebrow">Virtual</p><h3>Wherever you are</h3><p>You meet with your mentor online, so distance and schedule don't keep you out.</p></article>
-      <article class="card"><p class="eyebrow">Free to you</p><h3>Sponsored by donors</h3><p>Once your application is approved, your mentorship is fully sponsored. Cost should never be the reason a man stays stuck.</p></article>
+      <article class="card"><p class="eyebrow">Free to you</p><h3>Covered for you</h3><p>Once your application is approved, your mentorship is fully sponsored. Cost should never be the reason a man stays stuck.</p></article>
     </div>
   </div>
 </section>
@@ -302,14 +301,14 @@ MENTORSHIP = """
     </div>
   </div>
 </section>
-""" + GIVE_BAND
+"""
 
 STORY = """
 <section class="page-hero">
   <div class="wrap narrow">
     <p class="eyebrow light">Share your story</p>
     <h1>Has The Standard helped you? Tell us.</h1>
-    <p class="hero-lede">Your story shows other men what's possible and shows our partners what their generosity is doing. It takes about five minutes.</p>
+    <p class="hero-lede">Your story shows other men what's possible. It takes about five minutes.</p>
     <div class="actions"><a class="btn btn-gold" href="#share">Share your story</a></div>
   </div>
 </section>
@@ -339,9 +338,9 @@ STORY = """
 IMPACT = """
 <section class="page-hero">
   <div class="wrap narrow">
-    <p class="eyebrow light">Impact</p>
-    <h1>What your generosity builds.</h1>
-    <p class="hero-lede">We're launching in 2026. Here's what we've set out to do, and where we'll report what actually happens.</p>
+    <p class="eyebrow light">Our vision</p>
+    <h1>One man at a time. Generations at a time.</h1>
+    <p class="hero-lede">Here's the path we walk with every man, and where we believe it leads over the next ten years.</p>
   </div>
 </section>
 """ + PATHWAY + """
@@ -354,15 +353,14 @@ IMPACT = """
       <article class="card stat"><p class="eyebrow">Bible Experience</p><p class="big">100,000</p><p>men who experience the whole Bible</p></article>
       <article class="card stat"><p class="eyebrow">Mentorship</p><p class="big">1,000</p><p>mentorship sponsorships provided</p></article>
     </div>
-    <p class="fineprint center">Ten-year targets. Podcast reach is reported separately from verified program outcomes.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap narrow">
-    <p class="eyebrow">Donor updates</p>
-    <h2>Updates from the work</h2>
-    <p>Our first update to founding partners goes out in December 2026, covering what their gifts made possible in our first season. Future updates will be posted here.</p>
+    <p class="eyebrow">Stories</p>
+    <h2>Stories from the work</h2>
+    <p>As men share how God is changing their lives, we'll tell those stories here, always with their permission. Has The Standard helped you? <a href="{root}story/">Share your story</a>.</p>
   </div>
 </section>
 """ + GIVE_BAND
@@ -426,7 +424,7 @@ page("", "Life Builders | Build the man. Strengthen the family. Change the legac
 page("about/", "Our Story | Life Builders", "The story behind Life Builders and its founder, Preston Woody.", ABOUT, "about/")
 page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
-page("impact/", "Impact | Life Builders", "What Life Builders sets out to do in year one and over ten years.", IMPACT, "impact/")
+page("impact/", "Our Vision | Life Builders", "The path Life Builders walks with every man, and where it leads over ten years.", IMPACT, "impact/")
 page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/")
 # CNAME added once DNS points to GitHub Pages: (SITE / "CNAME").write_text("lifebuilders.net\n")
 (SITE / ".nojekyll").write_text("")
