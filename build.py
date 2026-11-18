@@ -4,7 +4,6 @@ import os, html, pathlib
 
 SITE = pathlib.Path(__file__).parent / "site"
 GIVE_URL = "https://givebutter.com/untitled-campaign-egsgrx"  # update when the campaign slug is renamed
-CONTACT_EMAIL = "preston@saintscrown.com"
 
 NAV = [("", "Home"), ("about/", "Our Story"), ("mentorship/", "Mentorship"),
        ("story/", "Share Your Story"), ("impact/", "Vision")]
@@ -57,15 +56,16 @@ def page(path, title, description, body, active):
         <li><a href="{root}story/">Share Your Story</a></li>
         <li><a href="{root}impact/">Vision</a></li>
         <li><a href="{root}give/">Give</a></li>
+        <li><a href="{root}contact/">Contact</a></li>
       </ul>
     </div>
     <div>
       <p class="eyebrow light">Contact</p>
-      <p>Preston Woody, Founder and President<br><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a><br>Fort Worth, Texas</p>
+      <p>Fort Worth, Texas<br><a href="{root}contact/">Send us a message</a></p>
     </div>
   </div>
   <div class="wrap legal">
-    <p>Life Builders is a ministry of Preston Woody Foundation Corporation, a 501(c)(3) public charity. EIN 42-3136909. Contributions are tax-deductible to the extent allowed by law.</p>
+    <p>Life Builders is a ministry of Preston Woody Foundation Corporation, a 501(c)(3) public charity. Contributions are tax-deductible to the extent allowed by law.</p>
     <p>&copy; 2026 Preston Woody Foundation Corporation. Build the man. Strengthen the family. Change the legacy.</p>
   </div>
 </footer>
@@ -297,7 +297,7 @@ MENTORSHIP = """
     <h2 class="center">Start your application</h2>
     <div class="form-slot" data-form="mentorship">
       <p>The application form opens here soon.</p>
-      <p class="fineprint">Questions in the meantime? Email <a href="mailto:preston@saintscrown.com">preston@saintscrown.com</a>.</p>
+      <p class="fineprint">Questions in the meantime? <a href="{root}contact/">Send us a message</a>.</p>
     </div>
   </div>
 </section>
@@ -401,7 +401,7 @@ GIVE = f"""
       <div class="tier"><p class="big">$50,000</p><p class="eyebrow">Legacy Builder</p></div>
       <div class="tier"><p class="big">$100,000</p><p class="eyebrow">Founding Vision Partner</p></div>
     </div>
-    <p class="center"><a class="btn btn-navy" href="mailto:{CONTACT_EMAIL}?subject=Founding%20partner%20gift">Talk with Preston</a></p>
+    <p class="center"><a class="btn btn-navy" href="../contact/">Start a conversation</a></p>
   </div>
 </section>
 
@@ -411,10 +411,29 @@ GIVE = f"""
     <h2 class="center">Give generously. Give wisely.</h2>
     <div class="cards three">
       <article class="card"><h3>Online</h3><p>One-time or recurring gifts through our secure giving page.</p><a class="text-link" href="{GIVE_URL}" target="_blank" rel="noopener">Give online &rarr;</a></article>
-      <article class="card"><h3>Check, ACH or wire</h3><p>Make checks payable to Preston Woody Foundation Corporation, memo Life Builders. Email us for the mailing address or secure bank instructions.</p></article>
-      <article class="card"><h3>Stock, IRA or donor-advised fund</h3><p>Appreciated stock, an IRA charitable distribution or a DAF grant can stretch your gift. Contact us before you sell or withdraw.</p></article>
+      <article class="card"><h3>Check, ACH or wire</h3><p>Make checks payable to Preston Woody Foundation Corporation, memo Life Builders. <a href="../contact/">Send us a message</a> for the mailing address or secure bank instructions.</p></article>
+      <article class="card"><h3>Stock, IRA or donor-advised fund</h3><p>Appreciated stock, an IRA charitable distribution or a DAF grant can stretch your gift. <a href="../contact/">Contact us</a> before you sell or withdraw.</p></article>
     </div>
     <p class="fineprint center">This page is general information, not tax advice. Please talk with your own tax advisor. Contributions are deductible to the extent allowed by law.</p>
+  </div>
+</section>
+"""
+
+
+CONTACT = """
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow light">Contact</p>
+    <h1>Let's talk.</h1>
+    <p class="hero-lede">Questions about mentorship, giving or the podcast? Send us a message and someone from our team will get back to you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow">
+    <div class="form-slot" data-form="contact">
+      <p>The contact form opens here soon.</p>
+    </div>
   </div>
 </section>
 """
@@ -425,6 +444,7 @@ page("about/", "Our Story | Life Builders", "The story behind Life Builders and 
 page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
 page("impact/", "Our Vision | Life Builders", "The path Life Builders walks with every man, and where it leads over ten years.", IMPACT, "impact/")
+page("contact/", "Contact | Life Builders", "Send Life Builders a message.", CONTACT, "contact/")
 page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/")
 # CNAME added once DNS points to GitHub Pages: (SITE / "CNAME").write_text("lifebuilders.net\n")
 (SITE / ".nojekyll").write_text("")
