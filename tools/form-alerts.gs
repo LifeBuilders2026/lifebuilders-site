@@ -17,8 +17,9 @@
 
 const RESPONSES_SHEET_ID = '1nlsSmdbaB8SmuCbhZr-tLfEhmiu52IHLiTV5cXkohPc';
 
+// Testing mode: Tom only. Add 'preston@saintscrown.com' back after testing,
+// then run setupLifeBuildersAlerts again.
 const RECIPIENTS = [
-  'preston@saintscrown.com',
   'connect@tombrittingham.com',
 ];
 
