@@ -13,10 +13,9 @@ Source for lifebuilders.net, a ministry of Preston Woody Foundation Corporation 
 3. Commit and push. The site updates in about a minute.
 
 ## Forms
-Three Google Forms are embedded on the site. All responses land in the "Life Builders Form Responses" Google Sheet (tabs: Mentorship Applications, Story Submissions, Contact Messages). `tools/create-forms.gs` is the script that created them. `tools/form-alerts.gs` emails each new response to the people listed in it.
-- Mentorship application: /mentorship/
-- Share your story: /story/
-- Contact: /contact/
+The mentorship, story and contact forms are built into the site (`forms_spec.py` renders them, `site/assets/js/forms.js` runs them). Each one posts its answers into a matching Google Form, so responses land in the "Life Builders Form Responses" Google Sheet (tabs: Mentorship Applications, Story Submissions, Contact Messages) and trigger the alert email from `tools/form-alerts.gs`.
+
+If you add, remove or reword a question in one of the Google Forms, update that form's entry in `forms_spec.py` to match (each field name is the Google Form's `entry.<id>`), rebuild, and send one test submission. Each site form links to its Google Form as a backup. `tools/create-forms.gs` is the script that created the Google Forms.
 
 ## Giving
 The Give buttons point to the GiveButter campaign (`GIVE_URL` at the top of `build.py`).
