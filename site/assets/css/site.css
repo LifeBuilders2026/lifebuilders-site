@@ -174,3 +174,5 @@ cite { display: block; font-style: normal; font-weight: 800; letter-spacing: .18
   .pathway, .journey, .steps, .tiers, .tiers.four { grid-template-columns: 1fr; }
   .brand span { font-size: 1.1rem; }
 }
+.give-embed { margin: 28px auto 12px; max-width: 560px; min-height: 420px; }
+html { scroll-behavior: smooth; }

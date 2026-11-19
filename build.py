@@ -3,13 +3,15 @@
 import os, html, pathlib
 
 SITE = pathlib.Path(__file__).parent / "site"
-GIVE_URL = "https://givebutter.com/untitled-campaign-egsgrx"  # update when the campaign slug is renamed
+GIVE_URL = "https://givebutter.com/lifebuilders-give"
+GIVEBUTTER_LIB = '<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=dvLoMdShHQYq7qEm&p=other"></script>'
+GIVEBUTTER_FORM = '<givebutter-widget id="pdVNee"></givebutter-widget>'
 
 NAV = [("", "Home"), ("about/", "Our Story"), ("mentorship/", "Mentorship"),
        ("story/", "Share Your Story")]
 
 
-def page(path, title, description, body, active):
+def page(path, title, description, body, active, head_extra=""):
     depth = path.count("/")
     root = "../" * depth
     nav = "".join(
@@ -30,6 +32,7 @@ def page(path, title, description, body, active):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,700;8..60,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{root}assets/css/site.css">
+{head_extra}
 </head>
 <body>
 <header class="site-header">
@@ -341,11 +344,21 @@ GIVE = f"""
     <p class="eyebrow light">Give</p>
     <h1>Build the man. Strengthen the family. Change the legacy.</h1>
     <p class="hero-lede">Your gift removes the financial barrier for men who are ready to change. One-time, monthly and multi-year gifts are all welcome.</p>
-    <div class="actions"><a class="btn btn-gold" href="{GIVE_URL}" target="_blank" rel="noopener">Give online</a></div>
+    <div class="actions"><a class="btn btn-gold" href="#give-now">Give now</a></div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="give-now">
+  <div class="wrap narrow">
+    <p class="eyebrow center">Give now</p>
+    <h2 class="center">Give securely, right here</h2>
+    <p class="lede center">Choose one-time or monthly. Every gift is tax-deductible and receipted by email.</p>
+    <div class="give-embed">{GIVEBUTTER_FORM}</div>
+    <p class="fineprint center">Trouble loading the form? <a href="{GIVE_URL}" target="_blank" rel="noopener">Give on our secure GiveButter page</a>.</p>
+  </div>
+</section>
+
+<section class="section alt">
   <div class="wrap">
     <p class="eyebrow center">Monthly impact partners</p>
     <h2 class="center">Give every month</h2>
@@ -356,11 +369,11 @@ GIVE = f"""
       <div class="tier"><p class="big">$500</p><p class="eyebrow">Change a Legacy</p><p>$6,000 a year</p></div>
       <div class="tier"><p class="big">$1,000</p><p class="eyebrow">Build the Future</p><p>$12,000 a year</p></div>
     </div>
-    <p class="center"><a class="btn btn-navy" href="{GIVE_URL}" target="_blank" rel="noopener">Become a monthly partner</a></p>
+    <p class="center"><a class="btn btn-navy" href="#give-now">Become a monthly partner</a></p>
   </div>
 </section>
 
-<section class="section alt">
+<section class="section">
   <div class="wrap">
     <p class="eyebrow center">Founding partners</p>
     <h2 class="center">Major gifts</h2>
@@ -375,12 +388,12 @@ GIVE = f"""
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap">
     <p class="eyebrow center">Ways to give</p>
     <h2 class="center">Give generously. Give wisely.</h2>
     <div class="cards three">
-      <article class="card"><h3>Online</h3><p>One-time or recurring gifts through our secure giving page.</p><a class="text-link" href="{GIVE_URL}" target="_blank" rel="noopener">Give online &rarr;</a></article>
+      <article class="card"><h3>Online</h3><p>One-time or recurring gifts through our secure giving page.</p><a class="text-link" href="#give-now">Give now &rarr;</a></article>
       <article class="card"><h3>Check, ACH or wire</h3><p>Make checks payable to Preston Woody Foundation Corporation, memo Life Builders. <a href="../contact/">Send us a message</a> for the mailing address or secure bank instructions.</p></article>
       <article class="card"><h3>Stock, IRA or donor-advised fund</h3><p>Appreciated stock, an IRA charitable distribution or a DAF grant can stretch your gift. <a href="../contact/">Contact us</a> before you sell or withdraw.</p></article>
     </div>
@@ -413,7 +426,7 @@ page("about/", "Our Story | Life Builders", "The story behind Life Builders and 
 page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
 page("contact/", "Contact | Life Builders", "Send Life Builders a message.", CONTACT, "contact/")
-page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/")
+page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/", head_extra=GIVEBUTTER_LIB)
 (SITE / "CNAME").write_text("lifebuilders.net\n")
 (SITE / ".nojekyll").write_text("")
 print("built")
