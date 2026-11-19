@@ -176,3 +176,48 @@ cite { display: block; font-style: normal; font-weight: 800; letter-spacing: .18
 }
 .give-embed { margin: 28px auto 12px; max-width: 560px; min-height: 420px; }
 html { scroll-behavior: smooth; }
+
+/* Site forms */
+.lb-form-wrap { margin-top: 30px; }
+.lb-form, .form-done { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: var(--radius); padding: 36px; box-shadow: 0 6px 24px rgba(28,35,64,.07); }
+.form-intro { margin: 0 0 12px; }
+.form-notice { margin: 0 0 24px; padding: 12px 16px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 6px; font-size: .9rem; color: #4a4f60; }
+.form-steps { list-style: none; display: flex; gap: 8px; padding: 0; margin: 0 0 28px; counter-reset: s; }
+.form-steps li { flex: 1; display: flex; align-items: center; gap: 8px; padding-top: 10px; border-top: 3px solid var(--line); font-size: .85rem; font-weight: 600; color: #8f94a5; }
+.form-steps li span { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--line); color: var(--navy); font-size: .75rem; }
+.form-steps li.active, .form-steps li.done { border-color: var(--gold); color: var(--navy); }
+.form-steps li.active span, .form-steps li.done span { background: var(--gold); color: var(--navy-deep); }
+.step-title { font-family: var(--serif); color: var(--navy); font-size: 1.4rem; margin: 0 0 20px; }
+.field { margin: 0 0 22px; border: 0; padding: 0; min-width: 0; }
+.field > label, .field > legend { display: block; font-weight: 600; color: var(--navy); margin-bottom: 8px; padding: 0; }
+.field .help { display: block; font-size: .85rem; color: #6b7083; margin: -4px 0 8px; }
+.req { color: var(--gold-ink); margin-left: 3px; }
+.lb-form input[type=text], .lb-form input[type=email], .lb-form input[type=tel], .lb-form textarea { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink, #1f2433); background: var(--cream); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; transition: border-color .15s ease, box-shadow .15s ease; }
+.lb-form textarea { resize: vertical; min-height: 120px; }
+.lb-form input:focus, .lb-form textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(192,156,73,.2); background: #fff; }
+.choices { display: grid; gap: 8px; }
+.choice { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; font-weight: 400; color: var(--ink, #1f2433); margin: 0; }
+.choice:hover { border-color: var(--gold); }
+.choice input[type=radio], .choice input[type=checkbox] { accent-color: var(--navy); width: 18px; height: 18px; margin: 0; flex: none; }
+.choice:has(input:checked) { border-color: var(--navy); background: #fff; }
+.choice.other .other-text { flex: 1; padding: 6px 10px; background: #fff; }
+.field.invalid input[type=text], .field.invalid input[type=email], .field.invalid input[type=tel], .field.invalid textarea, .field.invalid .choice { border-color: #b3261e; }
+.field-error { color: #b3261e; font-size: .85rem; margin: 6px 0 0; }
+.form-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
+.form-nav .btn:only-child { margin-left: auto; }
+.btn-ghost { background: transparent; color: var(--navy); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--navy); }
+.lb-form button { cursor: pointer; }
+.lb-form button[disabled] { opacity: .6; cursor: default; }
+.form-error { color: #b3261e; margin: 16px 0 0; }
+.form-required-note { font-size: .8rem; color: #8f94a5; margin: 18px 0 0; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-done { text-align: center; }
+.form-done h3 { font-family: var(--serif); color: var(--navy); font-size: 1.6rem; margin: 0 0 10px; }
+.form-done p { margin: 0; }
+@media (max-width: 560px) {
+  .lb-form, .form-done { padding: 24px 18px; }
+  .form-steps li { font-size: 0; gap: 0; justify-content: center; }
+  .form-steps li span { font-size: .75rem; }
+}
+.field, .lb-form-wrap, .form-done { scroll-margin-top: 96px; }

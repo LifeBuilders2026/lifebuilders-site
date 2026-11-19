@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Builds the Life Builders static site into ./site from the page content below."""
 import os, html, pathlib
+import forms_spec
 
 SITE = pathlib.Path(__file__).parent / "site"
 GIVE_URL = "https://givebutter.com/lifebuilders-give"
@@ -14,6 +15,11 @@ NAV = [("", "Home"), ("about/", "Our Story"), ("mentorship/", "Mentorship"),
 def page(path, title, description, body, active, head_extra=""):
     depth = path.count("/")
     root = "../" * depth
+    if "@@FORM_" in body:
+        for key in forms_spec.FORMS:
+            body = body.replace(f"@@FORM_{key}@@", forms_spec.render(key))
+        head_extra += f'\n<script defer src="{root}assets/js/forms.js"></script>'
+
     nav = "".join(
         f'<a href="{root}{href}"{" class=\"active\"" if href == active else ""}>{label}</a>'
         for href, label in NAV)
@@ -292,8 +298,7 @@ MENTORSHIP = """
   <div class="wrap narrow">
     <p class="eyebrow center">Apply</p>
     <h2 class="center">Start your application</h2>
-    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdecv6O4qvhO327ga7zbDR93pkgMOqBBIhntdF6pSUaMI-jIQ/viewform?embedded=true" height="1500" title="Mentorship application" loading="lazy">Loading</iframe></div>
-    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdecv6O4qvhO327ga7zbDR93pkgMOqBBIhntdF6pSUaMI-jIQ/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    @@FORM_mentor@@
     <p class="fineprint center">Questions first? <a href="{root}contact/">Send us a message</a>.</p>
   </div>
 </section>
@@ -323,8 +328,7 @@ STORY = """
   <div class="wrap narrow">
     <p class="eyebrow center">Your story</p>
     <h2 class="center">Share it here</h2>
-    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzvm9KSJhWinfOeMP8FQgX_MxfvhFWLHNZ4s3_8H75B9mYZw/viewform?embedded=true" height="1900" title="Share your story" loading="lazy">Loading</iframe></div>
-    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzvm9KSJhWinfOeMP8FQgX_MxfvhFWLHNZ4s3_8H75B9mYZw/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    @@FORM_story@@
     <p class="fineprint center">Your story stays private. We will never share it publicly without your separate permission.</p>
   </div>
 </section>
@@ -414,8 +418,7 @@ CONTACT = """
 
 <section class="section">
   <div class="wrap narrow">
-    <div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwSduOYAwvJzvgOXlVb3w8G5N3lhbIoVCTcSCq1GT1Ym7HPg/viewform?embedded=true" height="1150" title="Contact Life Builders" loading="lazy">Loading</iframe></div>
-    <p class="fineprint center">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwSduOYAwvJzvgOXlVb3w8G5N3lhbIoVCTcSCq1GT1Ym7HPg/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    @@FORM_contact@@
   </div>
 </section>
 """
