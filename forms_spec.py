@@ -15,7 +15,7 @@ OTHER = "__other__"
 FORMS = {
     "mentor": {
         "id": "1FAIpQLSdecv6O4qvhO327ga7zbDR93pkgMOqBBIhntdF6pSUaMI-jIQ",
-        "intro": "A free, 90-day virtual mentorship for men 18 and older. It takes about 10 minutes, and our team reads every application and follows up personally.",
+        "intro": "A free, 30-day virtual mentorship for men 18 and older. It takes about 10 minutes, and our team reads every application and follows up personally.",
         "notice": "Life Builders mentorship is not counseling or therapy. If you are in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).",
         "submit": "Submit application",
         "done_title": "Application received.",
@@ -32,10 +32,10 @@ FORMS = {
             (8, 0, 0, "Where you are", []),
             (1, 1489286356, 1, "What's going on in your life right now that made you apply?", []),
             (4, 1401944993, 1, "Where do you feel most stuck? Choose any that apply.", ["Faith", "Marriage", "Fatherhood", "Work or career", "Health", "Purpose and direction", "Habits or addiction", OTHER]),
-            (1, 1206632953, 1, "What do you want to be different 90 days from now?", []),
+            (1, 1206632953, 1, "What do you want to be different 30 days from now?", []),
             (2, 1560178698, 0, "How would you describe your faith right now?", ["Growing and active", "A believer, but inconsistent", "Exploring", "Not sure"]),
             (8, 0, 0, "Commitment", []),
-            (2, 373921141, 1, "Mentorship runs 90 days and meets virtually. Can you commit to meeting with your mentor regularly for 90 days?", ["Yes", "I have questions first"]),
+            (2, 373921141, 1, "Mentorship runs 30 days and meets virtually. Can you commit to meeting with your mentor regularly for 30 days?", ["Yes", "I have questions first"]),
             (4, 270477084, 0, "What times usually work best for you?", ["Weekday mornings", "Weekday lunch", "Weekday evenings", "Weekends"]),
             (2, 452295270, 1, "How did you hear about Life Builders?", ["The Standard podcast", "Saints Crown", "A friend or family member", "My church", "Social media", OTHER]),
             (1, 1563174404, 0, "Anything else we should know?", []),

@@ -32,7 +32,7 @@ def page(path, title, description, body, active, head_extra=""):
 <meta name="description" content="{html.escape(description)}">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(description)}">
-<meta property="og:image" content="https://lifebuilders.net/assets/img/logo.png">
+<meta property="og:image" content="https://lifebuilders.net/assets/img/og-image.jpg">
 <link rel="icon" type="image/png" href="{root}assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,7 +103,7 @@ PATHWAY = """
 """
 
 GIVE_BAND = """
-<section class="band navy">
+<section class="band navy band-photo" style="--photo:url('/assets/img/photos/fist.jpg')">
   <div class="wrap band-row">
     <div>
       <p class="eyebrow light">Join the work</p>
@@ -116,9 +116,9 @@ GIVE_BAND = """
 """
 
 HOME = """
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+<section class="hero hero-photo" style="--photo:url('/assets/img/photos/men-praying.jpg')">
+  <div class="wrap">
+    <div class="hero-copy">
       <p class="eyebrow light">For men ready to stop drifting</p>
       <h1>Build the man. Strengthen the family. Change the legacy.</h1>
       <p class="hero-lede">You weren't made to drift. Life Builders helps men root their lives in Scripture, walk with a mentor, and lead their families well. Mentorship is free for the men we serve.</p>
@@ -127,7 +127,6 @@ HOME = """
         <a class="btn btn-outline" href="{root}story/">Share your story</a>
       </div>
     </div>
-    <div class="hero-mark"><img src="{root}assets/img/logo-light.png" alt="Life Builders logo" width="340"></div>
   </div>
 </section>
 
@@ -144,6 +143,22 @@ HOME = """
   </div>
 </section>
 """ + PATHWAY + """
+<section class="section alt standard">
+  <div class="wrap two-col media-row">
+    <a class="standard-cover" href="https://podcasts.apple.com/podcast/id6783501774" target="_blank" rel="noopener"><img src="{root}assets/img/photos/the-standard.jpg" alt="The Standard with Preston Woody podcast cover" width="450" height="450" loading="lazy"></a>
+    <div>
+      <p class="eyebrow">The Standard with Preston Woody</p>
+      <h2>Where it starts for most men.</h2>
+      <p>The Standard is a weekly podcast that asks the questions most men never get asked. Preston sits down with leaders, entrepreneurs and builders for honest conversations about faith, marriage, work, purpose and the discipline it takes to grow.</p>
+      <p>It's the front door to Life Builders. A man hears something that names what he's been carrying. Then he has somewhere to take it: a daily Bible rhythm, and a mentor who walks the road with him.</p>
+      <div class="actions">
+        <a class="btn btn-navy" href="https://podcasts.apple.com/podcast/id6783501774" target="_blank" rel="noopener">Listen to The Standard</a>
+        <a class="btn btn-ghost-navy" href="{root}story/">Has it helped you? Tell us</a>
+      </div>
+    </div>
+  </div>
+</section>
+""" + """
 <section class="section alt">
   <div class="wrap">
     <p class="eyebrow center">What we do</p>
@@ -162,11 +177,17 @@ HOME = """
       <article class="card">
         <p class="eyebrow">Mentorship</p>
         <h3>A mentor who walks beside him</h3>
-        <p>A trained mentor walks with you for 90 days. It's free once your application is approved.</p>
+        <p>A trained mentor walks with you for 30 days. It's free once your application is approved.</p>
         <a class="text-link" href="{root}mentorship/">How mentorship works &rarr;</a>
       </article>
     </div>
   </div>
+</section>
+
+<section class="photo-strip" aria-label="Men at a Life Builders gathering">
+  <img src="{root}assets/img/photos/conversation.jpg" alt="A man speaking during a small-group conversation" loading="lazy">
+  <img src="{root}assets/img/photos/david.jpg" alt="A man praying with his hand on his heart" loading="lazy">
+  <img src="{root}assets/img/photos/reading.jpg" alt="A man holding an open notebook, listening" loading="lazy">
 </section>
 
 <section class="section">
@@ -205,12 +226,15 @@ ABOUT = """
 </section>
 
 <section class="section">
-  <div class="wrap narrow prose">
+  <div class="wrap founder">
+    <figure class="founder-photo"><img src="{root}assets/img/photos/preston-saints.jpg" alt="Preston Woody, founder of Life Builders, at a Saints Crown gathering" width="733" height="1100" loading="lazy"></figure>
+    <div class="prose">
     <p>Ten years ago I spent my final days with my grandfather, Wayne Woody. Each morning he rose before the sun, opened his Bible and read. When I asked him how he chose what to read each day, he told me he had read through the Bible more than 120 times. That shook me to my core.</p>
     <p>When he was young, he started reading it through each year, just ten to fifteen minutes first thing each morning. I committed to him that I would do the same. Ten years, a marriage, three businesses and three kids later, I have read the Bible ten times in four different versions. That daily discipline gave me the capacity to build a life dedicated to helping others do the same.</p>
     <p>In 2020 I became a coach, and I learned that transformation begins with information but takes root when a man has another man who can call out the gold nobody else sees and build a vision that outlasts life's hardest trials.</p>
     <p>My dream is to see 100,000 men experience the entire Bible at a time when most men are handing their thinking to someone, or something, else. I believe this work can create generational impact and give any man a shot at changing his legacy.</p>
     <p class="signature">Preston Woody<br><span>Founder and President</span></p>
+    </div>
   </div>
 </section>
 
@@ -253,7 +277,7 @@ MENTORSHIP = """
   <div class="wrap narrow">
     <p class="eyebrow light">Mentorship</p>
     <h1>You weren't meant to build alone.</h1>
-    <p class="hero-lede">A 90-day mentorship that pairs you with a trained mentor who walks beside you, calls out what's possible, and helps you lead yourself and your family well.</p>
+    <p class="hero-lede">A 30-day mentorship that pairs you with a trained mentor who walks beside you, calls out what's possible, and helps you lead yourself and your family well.</p>
     <div class="actions"><a class="btn btn-gold" href="#apply">Apply now</a></div>
   </div>
 </section>
@@ -261,7 +285,7 @@ MENTORSHIP = """
 <section class="section">
   <div class="wrap">
     <div class="cards three">
-      <article class="card"><p class="eyebrow">90 days</p><h3>Focused and finite</h3><p>A clear season with a written plan, so the growth lasts after the 90 days end.</p></article>
+      <article class="card"><p class="eyebrow">30 days</p><h3>Focused and finite</h3><p>A clear first season with a written plan, so the growth lasts after the 30 days end.</p></article>
       <article class="card"><p class="eyebrow">Virtual</p><h3>Wherever you are</h3><p>You meet with your mentor online, so distance and schedule don't keep you out.</p></article>
       <article class="card"><p class="eyebrow">Free to you</p><h3>Covered for you</h3><p>Once your application is approved, your mentorship is fully sponsored. Cost should never be the reason a man stays stuck.</p></article>
     </div>
@@ -273,12 +297,19 @@ MENTORSHIP = """
     <div>
       <p class="eyebrow">Who it's for</p>
       <h2>Men who are ready to stop drifting.</h2>
+      <img class="section-photo" src="{root}assets/img/photos/fireside.jpg" alt="A man smiling during a conversation by the fireplace" loading="lazy">
     </div>
     <div>
       <p>Husbands, fathers and leaders who are present but distracted, responsible but drifting, and ready for change but unsure where to begin.</p>
       <p>You don't need to have it figured out. You need to be honest about where you are and willing to do the work.</p>
     </div>
   </div>
+</section>
+
+<section class="photo-strip" aria-label="A Saints Crown gathering">
+  <img src="{root}assets/img/photos/whiteboard.jpg" alt="Preston Woody teaching at a whiteboard at a Saints Crown gathering" loading="lazy">
+  <img src="{root}assets/img/photos/nick-saints.jpg" alt="A man listening during a Saints Crown small-group conversation" loading="lazy">
+  <img src="{root}assets/img/photos/preston-pointing.jpg" alt="Preston Woody and a participant smiling at the camera" loading="lazy">
 </section>
 
 <section class="section">
@@ -289,7 +320,7 @@ MENTORSHIP = """
       <li><span class="num">1</span><h3>Apply</h3><p>Tell us where you are and where you want to go. It takes about ten minutes.</p></li>
       <li><span class="num">2</span><h3>Review</h3><p>Our team reads every application and follows up personally.</p></li>
       <li><span class="num">3</span><h3>Match</h3><p>Approved men are matched with a trained mentor.</p></li>
-      <li><span class="num">4</span><h3>Meet</h3><p>Your first virtual meeting sets your 90-day plan.</p></li>
+      <li><span class="num">4</span><h3>Meet</h3><p>Your first virtual meeting sets your 30-day plan.</p></li>
     </ol>
   </div>
 </section>
@@ -324,6 +355,17 @@ STORY = """
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap two-col media-row">
+    <img class="section-photo" src="{root}assets/img/photos/notebook.jpg" alt="A man writing in a notebook during a gathering" loading="lazy">
+    <div>
+      <p class="eyebrow">It starts with honesty</p>
+      <h2>You don't need a perfect story.</h2>
+      <p>Most men start by writing down what they've never said out loud. If something you heard on The Standard helped you take that step, your story can help the next man take his.</p>
+    </div>
+  </div>
+</section>
+
 <section class="section alt" id="share">
   <div class="wrap narrow">
     <p class="eyebrow center">Your story</p>
@@ -343,7 +385,7 @@ STORY = """
 """
 
 GIVE = f"""
-<section class="page-hero">
+<section class="page-hero hero-photo center-photo" style="--photo:url('/assets/img/photos/preston-teaching-wide.jpg')">
   <div class="wrap narrow">
     <p class="eyebrow light">Give</p>
     <h1>Build the man. Strengthen the family. Change the legacy.</h1>
@@ -426,7 +468,7 @@ CONTACT = """
 page("", "Life Builders | Build the man. Strengthen the family. Change the legacy.",
      "Life Builders helps men root their lives in Scripture, find a mentor, and lead their families well, and removes the cost barrier so any man can start.", HOME, "")
 page("about/", "Our Story | Life Builders", "The story behind Life Builders and its founder, Preston Woody.", ABOUT, "about/")
-page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 90-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
+page("mentorship/", "Mentorship | Life Builders", "A free, sponsored 30-day virtual mentorship for men ready to stop drifting.", MENTORSHIP, "mentorship/")
 page("story/", "Share Your Story | Life Builders", "Has The Standard podcast helped you? Share your story with Life Builders.", STORY, "story/")
 page("contact/", "Contact | Life Builders", "Send Life Builders a message.", CONTACT, "contact/")
 page("give/", "Give | Life Builders", "Support Life Builders with a one-time, monthly or founding partner gift.", GIVE, "give/", head_extra=GIVEBUTTER_LIB)
