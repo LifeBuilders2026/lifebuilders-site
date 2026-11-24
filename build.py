@@ -306,6 +306,19 @@ MENTORSHIP = """
   </div>
 </section>
 
+<section class="section saints">
+  <div class="wrap two-col media-row">
+    <div>
+      <p class="eyebrow">Backed by Saints Crown</p>
+      <h2>You get a brotherhood, not just a mentor.</h2>
+    </div>
+    <div>
+      <p>Life Builders mentorship is backed by Saints Crown, a faith-based coaching community where men find brotherhood and experience breakthroughs. Every man in the program gets access to Saints Crown and its coaches, built on three pillars: Faith, Family and Fitness.</p>
+      <p><a class="text-link" href="https://saintscrown.com" target="_blank" rel="noopener">Learn about Saints Crown &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
 <section class="photo-strip" aria-label="A Saints Crown gathering">
   <img src="{root}assets/img/photos/whiteboard.jpg" alt="Preston Woody teaching at a whiteboard at a Saints Crown gathering" loading="lazy">
   <img src="{root}assets/img/photos/nick-saints.jpg" alt="A man listening during a Saints Crown small-group conversation" loading="lazy">
